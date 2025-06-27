@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -31,93 +32,92 @@
       box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
       z-index: 1000;
     }
-    .client-list { text-align: left; column-count: 2; max-width: 700px; margin: 0 auto; }
-    .faq-list { text-align: left; max-width: 800px; margin: 0 auto; }
   </style>
 </head>
 <body>
   <header>
     <h1>Soporte Técnico Ruiz</h1>
     <p>Reparación y soluciones tecnológicas para tu hogar y negocio</p>
-  </header>  <nav class="nav-bg">
+  </header>
+
+  <nav class="nav-bg">
     <a href="#servicios">Servicios</a>
-    <a href="#prestamos">Préstamos</a>
     <a href="#contacto">Contáctenos</a>
     <a href="#redes">Redes Sociales</a>
-    <a href="#clientes">Clientes</a>
-  </nav>  <section>
+  </nav>
+
+  <section>
     <h2>¿Quiénes somos?</h2>
-    <p>En <strong>Soporte Técnico Ruiz</strong> ofrecemos soluciones confiables en reparación de computadoras, laptops, impresoras, instalación de programas, antivirus y cámaras de vigilancia. Atendemos a domicilio y de forma remota.</p><h2 id="servicios">Nuestros Servicios</h2>
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
-  <!-- Servicios existentes -->
-</div>
+    <p>En <strong>Soporte Técnico Ruiz</strong> ofrecemos soluciones confiables en reparación de computadoras, laptops, impresoras, instalación de programas, antivirus y cámaras de vigilancia. Atendemos a domicilio y de forma remota.</p>
 
-<h2 id="prestamos" class="mt-5">Préstamos para RUC 10</h2>
-<p>Ofrecemos préstamos rápidos y accesibles para personas con RUC 10.</p>
-<p><strong>Interés:</strong> 20% mensual.</p>
-<p>Ideal para trabajadores independientes, comerciantes y emprendedores.</p>
+    <h2 id="servicios">Nuestros Servicios</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/300x160?text=Computadoras" class="card-img-top" alt="Computadoras">
+          <div class="card-body">
+            <h5 class="card-title">Reparación de Computadoras</h5>
+            <p class="card-text">Diagnóstico, limpieza, cambio de piezas y optimización de equipos de escritorio.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/300x160?text=Laptops" class="card-img-top" alt="Laptops">
+          <div class="card-body">
+            <h5 class="card-title">Reparación de Laptops</h5>
+            <p class="card-text">Solución de problemas de hardware y software. Cambio de pantalla, teclado, batería, entre otros.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/300x160?text=Impresoras" class="card-img-top" alt="Impresoras">
+          <div class="card-body">
+            <h5 class="card-title">Impresoras</h5>
+            <p class="card-text">Configuración, mantenimiento y reparación de impresoras domésticas y de oficina.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/300x160?text=Programas+Antivirus" class="card-img-top" alt="Programas">
+          <div class="card-body">
+            <h5 class="card-title">Instalación de Software</h5>
+            <p class="card-text">Instalación de programas esenciales y antivirus confiables. Limpieza de malware y virus.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://via.placeholder.com/300x160?text=Camaras" class="card-img-top" alt="Cámaras">
+          <div class="card-body">
+            <h5 class="card-title">Instalación de Cámaras</h5>
+            <p class="card-text">Instalación profesional de cámaras de vigilancia con acceso remoto desde tu celular.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<h3 class="mt-4">Solicita tu préstamo</h3>
-<form action="solicitud.php" method="POST" class="text-start mx-auto" style="max-width: 600px;">
-  <div class="mb-3">
-    <label for="nombre" class="form-label">Nombre completo</label>
-    <input type="text" class="form-control" id="nombre" name="nombre" required>
-  </div>
-  <div class="mb-3">
-    <label for="ruc" class="form-label">RUC 10</label>
-    <input type="text" class="form-control" id="ruc" name="ruc" required>
-  </div>
-  <div class="mb-3">
-    <label for="monto" class="form-label">Monto solicitado</label>
-    <input type="number" class="form-control" id="monto" name="monto" required>
-  </div>
-  <div class="mb-3">
-    <label for="telefono" class="form-label">Teléfono / WhatsApp</label>
-    <input type="text" class="form-control" id="telefono" name="telefono" required>
-  </div>
-  <button type="submit" class="btn btn-primary">Enviar solicitud</button>
-</form>
+    <h2 id="contacto" class="mt-5">Contáctenos</h2>
+    <p><a href="mailto:satoruruiz2@gmail.com">Escríbenos por correo</a> o envíanos un mensaje por <a href="https://wa.me/51935042954">WhatsApp</a>.</p>
 
-<h3 class="mt-5">Preguntas frecuentes sobre los préstamos</h3>
-<div class="faq-list">
-  <p><strong>¿Quiénes pueden acceder?</strong><br>Personas naturales con RUC 10 activo.</p>
-  <p><strong>¿Cuál es el monto mínimo y máximo?</strong><br>Desde S/ 200 hasta S/ 5,000 según evaluación.</p>
-  <p><strong>¿Cuánto tarda en aprobarse?</strong><br>En menos de 24 horas si tienes tus datos completos.</p>
-  <p><strong>¿Cómo se realiza el pago?</strong><br>Vía depósito, transferencia o pago en agente autorizado.</p>
-</div>
+    <h2 id="redes">Encuéntranos en Redes Sociales</h2>
+    <div class="social-links">
+      <a href="https://facebook.com/soporteruiz" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://wa.me/51935042954" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:satoruruiz2@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    </div>
+  </section>
 
-<h2 id="contacto" class="mt-5">Contáctenos</h2>
-<p><a href="mailto:satoruruiz2@gmail.com">Escríbenos por correo</a> o envíanos un mensaje por <a href="https://wa.me/51935042954">WhatsApp</a>.</p>
-
-<h2 id="redes">Encuéntranos en Redes Sociales</h2>
-<div class="social-links">
-  <a href="https://facebook.com/soporteruiz" target="_blank"><i class="fab fa-facebook"></i></a>
-  <a href="https://wa.me/51935042954" target="_blank"><i class="fab fa-whatsapp"></i></a>
-  <a href="mailto:satoruruiz2@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-</div>
-
-<h2 id="clientes" class="mt-5">Clientes y Referencias</h2>
-<div class="client-list">
-  <ul>
-    <li>Ferretería El Constructor</li>
-    <li>Academia Pre Universitaria Los Sabios</li>
-    <li>Grifo San Pedro</li>
-    <li>Bodega La Estrella</li>
-    <li>Consultorio Dental Sonríe</li>
-    <li>Cevichería El Rincón Marino</li>
-    <li>Oficina Contable G&S</li>
-    <li>Restaurante Doña Peta</li>
-    <li>Centro Médico San Juan</li>
-    <li>Hotel Las Gardenias</li>
-    <li>Escuela de Conducción PerúCar</li>
-    <li>Decenas de hogares en Lima Norte</li>
-    <li>Y muchos más...</li>
-  </ul>
-</div>
-
-  </section>  <a href="https://wa.me/51935042954" class="whatsapp-float" target="_blank">
+  <a href="https://wa.me/51935042954" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
-  </a>  <footer>
+  </a>
+
+  <footer>
     &copy; 2025 Soporte Técnico Ruiz. Todos los derechos reservados.
-  </footer>  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script></body>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
