@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Soporte Técnico Ruiz</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -32,92 +31,143 @@
       box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
       z-index: 1000;
     }
+    .client-list { text-align: left; column-count: 2; max-width: 700px; margin: 0 auto; }
+    .faq-list { text-align: left; max-width: 800px; margin: 0 auto; }
+    .chatbot-container {
+      display: none;
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 320px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      overflow: hidden;
+      z-index: 999;
+    }
+    .chatbot-header {
+      background: #0d47a1;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .chatbot-body {
+      max-height: 300px;
+      overflow-y: auto;
+      padding: 10px;
+    }
+    .bot-message, .user-message {
+      margin: 8px 0;
+      padding: 8px 12px;
+      border-radius: 8px;
+      max-width: 80%;
+    }
+    .bot-message { background-color: #e3f2fd; text-align: left; }
+    .user-message { background-color: #c8e6c9; text-align: right; margin-left: auto; }
+    .options button {
+      margin: 5px 3px;
+      padding: 6px 10px;
+      border: none;
+      border-radius: 5px;
+      background: #1976d2;
+      color: white;
+      cursor: pointer;
+    }
+    .chatbot-footer {
+      display: flex;
+      border-top: 1px solid #ccc;
+    }
+    .chatbot-footer input {
+      flex: 1;
+      border: none;
+      padding: 10px;
+      outline: none;
+    }
+    .chatbot-footer button {
+      background: #0d47a1;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    .chatbot-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 90px;
+      background-color: #0d47a1;
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 1000;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Soporte Técnico Ruiz</h1>
-    <p>Reparación y soluciones tecnológicas para tu hogar y negocio</p>
-  </header>
-
-  <nav class="nav-bg">
-    <a href="#servicios">Servicios</a>
-    <a href="#contacto">Contáctenos</a>
-    <a href="#redes">Redes Sociales</a>
-  </nav>
-
-  <section>
-    <h2>¿Quiénes somos?</h2>
-    <p>En <strong>Soporte Técnico Ruiz</strong> ofrecemos soluciones confiables en reparación de computadoras, laptops, impresoras, instalación de programas, antivirus y cámaras de vigilancia. Atendemos a domicilio y de forma remota.</p>
-
-    <h2 id="servicios">Nuestros Servicios</h2>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
-      <div class="col">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/300x160?text=Computadoras" class="card-img-top" alt="Computadoras">
-          <div class="card-body">
-            <h5 class="card-title">Reparación de Computadoras</h5>
-            <p class="card-text">Diagnóstico, limpieza, cambio de piezas y optimización de equipos de escritorio.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/300x160?text=Laptops" class="card-img-top" alt="Laptops">
-          <div class="card-body">
-            <h5 class="card-title">Reparación de Laptops</h5>
-            <p class="card-text">Solución de problemas de hardware y software. Cambio de pantalla, teclado, batería, entre otros.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/300x160?text=Impresoras" class="card-img-top" alt="Impresoras">
-          <div class="card-body">
-            <h5 class="card-title">Impresoras</h5>
-            <p class="card-text">Configuración, mantenimiento y reparación de impresoras domésticas y de oficina.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/300x160?text=Programas+Antivirus" class="card-img-top" alt="Programas">
-          <div class="card-body">
-            <h5 class="card-title">Instalación de Software</h5>
-            <p class="card-text">Instalación de programas esenciales y antivirus confiables. Limpieza de malware y virus.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="https://via.placeholder.com/300x160?text=Camaras" class="card-img-top" alt="Cámaras">
-          <div class="card-body">
-            <h5 class="card-title">Instalación de Cámaras</h5>
-            <p class="card-text">Instalación profesional de cámaras de vigilancia con acceso remoto desde tu celular.</p>
-          </div>
-        </div>
+  <!-- Contenido existente -->  <div class="chatbot-container">
+    <div class="chatbot-header">💬 Soporte Técnico Ruiz</div>
+    <div class="chatbot-body" id="chat">
+      <div class="bot-message">👋 ¡Hola! ¿En qué podemos ayudarte?</div>
+      <div class="options">
+        <button onclick="userReply('Reparación de computadoras')">💻 Reparación</button>
+        <button onclick="userReply('Instalación de cámaras')">📷 Cámaras</button>
+        <button onclick="userReply('Solicitar préstamo')">💰 Préstamo</button>
+        <button onclick="userReply('Hablar con un asesor')">📞 Asesor</button>
       </div>
     </div>
-
-    <h2 id="contacto" class="mt-5">Contáctenos</h2>
-    <p><a href="mailto:satoruruiz2@gmail.com">Escríbenos por correo</a> o envíanos un mensaje por <a href="https://wa.me/51935042954">WhatsApp</a>.</p>
-
-    <h2 id="redes">Encuéntranos en Redes Sociales</h2>
-    <div class="social-links">
-      <a href="https://facebook.com/soporteruiz" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://wa.me/51935042954" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="mailto:satoruruiz2@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    <div class="chatbot-footer">
+      <input type="text" id="userInput" placeholder="Escribe algo..." onkeypress="handleKey(event)">
+      <button onclick="sendMessage()">Enviar</button>
     </div>
-  </section>
-
-  <a href="https://wa.me/51935042954" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <footer>
-    &copy; 2025 Soporte Técnico Ruiz. Todos los derechos reservados.
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </div>
+  <button class="chatbot-toggle" onclick="toggleChat()">💬</button>  <script>
+    function toggleChat() {
+      const container = document.querySelector('.chatbot-container');
+      container.style.display = container.style.display === 'block' ? 'none' : 'block';
+    }
+    function userReply(text) {
+      addMessage(text, 'user-message');
+      setTimeout(() => respondTo(text), 800);
+    }
+    function addMessage(message, className) {
+      const chat = document.getElementById('chat');
+      const div = document.createElement('div');
+      div.className = className;
+      div.textContent = message;
+      chat.appendChild(div);
+      chat.scrollTop = chat.scrollHeight;
+    }
+    function respondTo(text) {
+      let response = '';
+      if (text.includes('Reparación')) {
+        response = '🔧 Hacemos diagnóstico, cambio de piezas y más. ¿Quieres agendar una cita?';
+      } else if (text.includes('Cámaras')) {
+        response = '📷 Instalamos cámaras con acceso remoto desde tu celular. ¿Deseas una cotización?';
+      } else if (text.includes('Préstamo')) {
+        response = '💰 Ofrecemos préstamos para RUC 10 con 20% de interés mensual. ¿Quieres enviar tus datos?';
+      } else if (text.includes('Asesor')) {
+        response = '📞 Puedes contactarnos por WhatsApp: https://wa.me/51935042954';
+      } else {
+        response = '🤖 Lo siento, aún no comprendo eso. ¿Puedes intentar con otra opción?';
+      }
+      addMessage(response, 'bot-message');
+    }
+    function sendMessage() {
+      const input = document.getElementById('userInput');
+      const message = input.value.trim();
+      if (message) {
+        userReply(message);
+        input.value = '';
+      }
+    }
+    function handleKey(event) {
+      if (event.key === 'Enter') {
+        sendMessage();
+      }
+    }
+  </script></body>
 </html>
